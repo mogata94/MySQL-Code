@@ -1,5 +1,4 @@
 -- delete duplicates
-
 CREATE TABLE resorts1 LIKE resorts;
 
 INSERT INTO resorts1
@@ -221,7 +220,6 @@ SET Resort = REPLACE(Resort, ' n ', '-')
 WHERE ID IN (33);
 
 -- fixing parenthases
-
 UPDATE resorts 
 	SET Resort = REPLACE(Resort, '-Halblech-', '(Halblech)')
 WHERE ID = 147;
