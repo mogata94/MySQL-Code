@@ -1,12 +1,3 @@
--- set safe update mode, autocommit and local_infile 
-SET SQL_SAFE_UPDATES = 0;
-SET GLOBAL local_infile = 1;
-SET autocommit = 0; 
-
--- importing csv data files 
-load data local infile '/Users/marcusogata/Desktop/Ski Resorts Data/snow.csv' into table snow fields terminated by ',' ignore 1 rows;   
-load data local infile '/Users/marcusogata/Desktop/Ski Resorts Data/resorts.csv' into table resorts fields terminated by ',' ignore 1 rows;
-
 -- delete duplicates
 
 CREATE TABLE resorts1 LIKE resorts;
@@ -393,7 +384,6 @@ UPDATE resorts
 	SET Price = REPLACE(Price, '0', '28')
 WHERE ID = 495;
 
-SELECT * FROM resorts;
 
 
 
